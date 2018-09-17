@@ -1,0 +1,47 @@
+---
+## Eclipse Che Web IDE Install
+
+# create project
+- name: check if eclipse che project {{ project_name }} exists
+  shell: "{{ openshift_cli }} get project {{ project_name }}"
+  register: project_result
+  ignore_errors: true
+  changed_when: false
+
+- name: create eclipse che project {{ project_name }}
+  shell: "{{ openshift_cli }} new-project {{ project_name }} --display-name='{{ project_display_name }}' --description='{{ project_desc }}'"
+  when: project_result|failed
+
+- name: assign user as project admin
+  shell: "{{ openshift_cli }} adm policy add-role-to-user admin {{ project_admin }} -n {{ project_name }}"
+  ignore_errors: true
+  when: 
+    - project_result|failed
+    - project_admin is defined
+    - project_admin is not none
+    - project_admin|trim() != ""
+
+- name: annotate eclipse che project {{ project_name }}
+  shell: "{{ openshift_cli }} annotate --overwrite namespace {{ project_name }} {{ project_annotations }}"
+  ignore_errors: true
+  when:
+    - project_result|failed
+    - project_annotations is defined
+    - project_annotations is not none
+    - project_annotations|trim() != ""    
+
+# import eclispe che template
+- name: import eclipse che template
+  shell: "{{ openshift_cli }} apply -f https://raw.githubusercontent.com/minishift/minishift/master/addons/che/templates/che-single-user.yml -n {{ project_name }}"
+
+# install eclipse che
+- name: deploy eclipse che template
+  shell: "{{ openshift_cli }} new-app che-single-user -n {{ project_name }} -p IMAGE_CHE_SERVER=eclipse/che-server:{{ che_version }} -p PROJECT_NAME={{ project_name }} -p DOMAIN_NAME={{ route_suffix }}"
+  ignore_errors: true
+
+- name: adjust eclipse che resources
+  shell: |
+    {{ openshift_cli }} set probe dc/che --readiness --initial-delay-seconds=60 --failure-threshold=10 --period-seconds=30 -n {{ project_name }}
+    {{ openshift_cli }} set probe dc/che --liveness --initial-delay-seconds=180 --failure-threshold=10 --period-seconds=30 -n {{ project_name }}
+    {{ openshift_cli }} set resources dc/che --requests=cpu=200m,memory=512Mi --limits=cpu=2,memory=2Gi -n {{ project_name }}
+  ignore_errors: true

@@ -1,0 +1,553 @@
+2018-09-17 09:22:26,242 p=2179 u=root |  - downloading role 'openshift_common_facts', owned by siamaksade
+2018-09-17 09:22:26,702 p=2179 u=root |  - downloading role from https://github.com/siamaksade/ansible-openshift-common-facts/archive/ocp-3.9.tar.gz
+2018-09-17 09:22:26,934 p=2179 u=root |  - extracting openshift_common_facts to /root/jw18-lab-master/ansible/roles/openshift_common_facts
+2018-09-17 09:22:26,940 p=2179 u=root |  - openshift_common_facts (ocp-3.9) was installed successfully
+2018-09-17 09:22:27,025 p=2179 u=root |  - downloading role 'openshift_sonatype_nexus', owned by siamaksade
+2018-09-17 09:22:28,670 p=2179 u=root |  - downloading role from https://github.com/siamaksade/ansible-openshift-nexus/archive/ocp-3.9.tar.gz
+2018-09-17 09:22:28,984 p=2179 u=root |  - extracting openshift_sonatype_nexus to /root/jw18-lab-master/ansible/roles/openshift_sonatype_nexus
+2018-09-17 09:22:28,992 p=2179 u=root |  - openshift_sonatype_nexus (ocp-3.9) was installed successfully
+2018-09-17 09:22:29,072 p=2179 u=root |  - downloading role 'openshift_gogs', owned by siamaksade
+2018-09-17 09:22:30,175 p=2179 u=root |  - downloading role from https://github.com/siamaksade/ansible-openshift-gogs/archive/ocp-3.9.tar.gz
+2018-09-17 09:22:30,397 p=2179 u=root |  - extracting openshift_gogs to /root/jw18-lab-master/ansible/roles/openshift_gogs
+2018-09-17 09:22:30,402 p=2179 u=root |  - openshift_gogs (ocp-3.9) was installed successfully
+2018-09-17 09:22:30,472 p=2179 u=root |  - downloading role 'openshift_workshopper', owned by siamaksade
+2018-09-17 09:22:31,184 p=2179 u=root |  - downloading role from https://github.com/siamaksade/ansible-openshift-workshopper/archive/ocp-3.9.tar.gz
+2018-09-17 09:22:31,430 p=2179 u=root |  - extracting openshift_workshopper to /root/jw18-lab-master/ansible/roles/openshift_workshopper
+2018-09-17 09:22:31,436 p=2179 u=root |  - openshift_workshopper (ocp-3.9) was installed successfully
+2018-09-17 09:22:31,627 p=2179 u=root |  - downloading role 'openshift_eclipse_che', owned by siamaksade
+2018-09-17 09:22:32,095 p=2179 u=root |  - downloading role from https://github.com/siamaksade/ansible-openshift-eclipse-che/archive/ocp-3.9.tar.gz
+2018-09-17 09:22:32,394 p=2179 u=root |  - extracting openshift_eclipse_che to /root/jw18-lab-master/ansible/roles/openshift_eclipse_che
+2018-09-17 09:22:32,402 p=2179 u=root |  - openshift_eclipse_che (ocp-3.9) was installed successfully
+2018-09-17 09:22:33,103 p=2749 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note
+that the implicit localhost does not match 'all'
+
+2018-09-17 09:22:35,341 p=2749 u=root |  PLAY [Deploy Infra Components for Cloud-Native Labs at Jenkins World 2018] *****
+2018-09-17 09:22:35,451 p=2749 u=root |  TASK [Gathering Facts] *********************************************************
+2018-09-17 09:22:37,048 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:37,059 p=2749 u=root |  TASK [include_role] ************************************************************
+2018-09-17 09:22:37,145 p=2749 u=root |  TASK [openshift_common_facts : check if kube config dir exists] ****************
+2018-09-17 09:22:37,588 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:37,616 p=2749 u=root |  TASK [openshift_common_facts : set openshift cli options (.kube)] **************
+2018-09-17 09:22:37,667 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:37,684 p=2749 u=root |  TASK [openshift_common_facts : check if token file exists] *********************
+2018-09-17 09:22:37,922 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:37,932 p=2749 u=root |  TASK [openshift_common_facts : set token facts] ********************************
+2018-09-17 09:22:37,966 p=2749 u=root |  skipping: [localhost]
+2018-09-17 09:22:37,977 p=2749 u=root |  TASK [openshift_common_facts : set openshift cli options with token] ***********
+2018-09-17 09:22:38,014 p=2749 u=root |  skipping: [localhost]
+2018-09-17 09:22:38,029 p=2749 u=root |  TASK [openshift_common_facts : get openshift master] ***************************
+2018-09-17 09:22:38,655 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:38,666 p=2749 u=root |  TASK [openshift_common_facts : set openshift master fact] **********************
+2018-09-17 09:22:38,702 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:38,714 p=2749 u=root |  TASK [openshift_common_facts : set openshift cli options (server)] *************
+2018-09-17 09:22:38,747 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:38,755 p=2749 u=root |  TASK [openshift_common_facts : get openshift user] *****************************
+2018-09-17 09:22:46,564 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:46,587 p=2749 u=root |  TASK [openshift_common_facts : set openshift user fact] ************************
+2018-09-17 09:22:46,746 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:46,771 p=2749 u=root |  TASK [openshift_common_facts : generate tmp project name] **********************
+2018-09-17 09:22:46,946 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:46,964 p=2749 u=root |  TASK [openshift_common_facts : create tmp project] *****************************
+2018-09-17 09:22:48,718 p=2749 u=root |  changed: [localhost]
+2018-09-17 09:22:48,730 p=2749 u=root |  TASK [openshift_common_facts : create dummy route to calculate hostnames] ******
+2018-09-17 09:22:50,235 p=2749 u=root |  changed: [localhost]
+2018-09-17 09:22:50,250 p=2749 u=root |  TASK [openshift_common_facts : get dummy route to calculate hostnames] *********
+2018-09-17 09:22:50,786 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:50,806 p=2749 u=root |  TASK [openshift_common_facts : set routes hostname fact] ***********************
+2018-09-17 09:22:50,858 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:50,874 p=2749 u=root |  TASK [openshift_common_facts : delete tmp project] *****************************
+2018-09-17 09:22:51,527 p=2749 u=root |  changed: [localhost]
+2018-09-17 09:22:51,539 p=2749 u=root |  TASK [set_fact] ****************************************************************
+2018-09-17 09:22:51,570 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:51,588 p=2749 u=root |  TASK [debug] *******************************************************************
+2018-09-17 09:22:51,628 p=2749 u=root |  ok: [localhost] => {
+    "apps_hostname_suffix": "apps-4cf9.generic.opentlc.com"
+}
+2018-09-17 09:22:51,642 p=2749 u=root |  TASK [debug] *******************************************************************
+2018-09-17 09:22:51,682 p=2749 u=root |  ok: [localhost] => {
+    "gogs_hostname": "gogs-lab-infra.apps-4cf9.generic.opentlc.com"
+}
+2018-09-17 09:22:51,690 p=2749 u=root |  TASK [clean up lab environment] ************************************************
+2018-09-17 09:22:52,633 p=2749 u=root |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": "oc --config=/root/.kube/config --server=https://master.example.com:8443 --insecure-skip-tls-verify=true delete project lab-infra istio-system prod\n oc --config=/root/.kube/config --server=https://master.example.com:8443 --insecure-skip-tls-verify=true delete MutatingWebhookConfiguration istio-sidecar-injector", "delta": "0:00:00.674949", "end": "2018-09-17 09:22:52.600931", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 09:22:51.925982", "stderr": "Error from server (NotFound): namespaces \"lab-infra\" not found\nError from server (NotFound): namespaces \"istio-system\" not found\nError from server (NotFound): namespaces \"prod\" not found\nError from server (NotFound): mutatingwebhookconfigurations.admissionregistration.k8s.io \"istio-sidecar-injector\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"lab-infra\" not found", "Error from server (NotFound): namespaces \"istio-system\" not found", "Error from server (NotFound): namespaces \"prod\" not found", "Error from server (NotFound): mutatingwebhookconfigurations.admissionregistration.k8s.io \"istio-sidecar-injector\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 09:22:52,633 p=2749 u=root |  ...ignoring
+2018-09-17 09:22:52,646 p=2749 u=root |  TASK [wait for lab-infra project to get removed] *******************************
+2018-09-17 09:22:53,191 p=2749 u=root |  fatal: [localhost]: FAILED! => {"attempts": 1, "changed": true, "cmd": "oc --config=/root/.kube/config --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get project lab-infra", "delta": "0:00:00.292150", "end": "2018-09-17 09:22:53.154706", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 09:22:52.862556", "stderr": "Error from server (NotFound): namespaces \"lab-infra\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"lab-infra\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 09:22:53,191 p=2749 u=root |  ...ignoring
+2018-09-17 09:22:53,201 p=2749 u=root |  TASK [wait for istio-system project to get removed] ****************************
+2018-09-17 09:22:53,828 p=2749 u=root |  fatal: [localhost]: FAILED! => {"attempts": 1, "changed": true, "cmd": "oc --config=/root/.kube/config --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get project istio-system", "delta": "0:00:00.375475", "end": "2018-09-17 09:22:53.788642", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 09:22:53.413167", "stderr": "Error from server (NotFound): namespaces \"istio-system\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"istio-system\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 09:22:53,829 p=2749 u=root |  ...ignoring
+2018-09-17 09:22:53,846 p=2749 u=root |  TASK [wait for prod project to get removed] ************************************
+2018-09-17 09:22:54,432 p=2749 u=root |  fatal: [localhost]: FAILED! => {"attempts": 1, "changed": true, "cmd": "oc --config=/root/.kube/config --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get project prod", "delta": "0:00:00.350112", "end": "2018-09-17 09:22:54.400253", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 09:22:54.050141", "stderr": "Error from server (NotFound): namespaces \"prod\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"prod\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 09:22:54,433 p=2749 u=root |  ...ignoring
+2018-09-17 09:22:54,451 p=2749 u=root |  TASK [include_tasks] ***********************************************************
+2018-09-17 09:22:54,550 p=2749 u=root |  included: /root/jw18-lab-master/ansible/init_istio.yml for localhost
+2018-09-17 09:22:54,586 p=2749 u=root |  TASK [check if istio deployed] *************************************************
+2018-09-17 09:22:55,259 p=2749 u=root |  fatal: [localhost]: FAILED! => {"changed": false, "cmd": "oc --config=/root/.kube/config --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get project istio-system", "delta": "0:00:00.385982", "end": "2018-09-17 09:22:55.222490", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 09:22:54.836508", "stderr": "Error from server (NotFound): namespaces \"istio-system\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"istio-system\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 09:22:55,259 p=2749 u=root |  ...ignoring
+2018-09-17 09:22:55,268 p=2749 u=root |  TASK [create local openshift config directory if doesn't exist] ****************
+2018-09-17 09:22:55,654 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:55,671 p=2749 u=root |  TASK [create istio host inventory] *********************************************
+2018-09-17 09:22:56,362 p=2749 u=root |  ok: [localhost]
+2018-09-17 09:22:56,389 p=2749 u=root |  TASK [create istio-system project] *********************************************
+2018-09-17 09:22:59,157 p=2749 u=root |  changed: [localhost]
+2018-09-17 09:22:59,174 p=2749 u=root |  TASK [deploy istio installer job] **********************************************
+2018-09-17 09:22:59,976 p=2749 u=root |  changed: [localhost]
+2018-09-17 09:22:59,987 p=2749 u=root |  TASK [wait for istio sidecar-injector to initialize] ***************************
+2018-09-17 09:23:00,664 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (30 retries left).
+2018-09-17 09:24:01,689 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (29 retries left).
+2018-09-17 09:25:02,459 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (28 retries left).
+2018-09-17 09:26:03,038 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (27 retries left).
+2018-09-17 09:27:03,799 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (26 retries left).
+2018-09-17 09:28:04,503 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (25 retries left).
+2018-09-17 09:29:05,168 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (24 retries left).
+2018-09-17 09:30:05,897 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (23 retries left).
+2018-09-17 09:31:06,452 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (22 retries left).
+2018-09-17 09:32:07,090 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (21 retries left).
+2018-09-17 09:33:07,698 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (20 retries left).
+2018-09-17 09:34:08,413 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (19 retries left).
+2018-09-17 09:35:08,950 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (18 retries left).
+2018-09-17 09:36:09,671 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (17 retries left).
+2018-09-17 09:37:10,270 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (16 retries left).
+2018-09-17 09:38:10,971 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (15 retries left).
+2018-09-17 09:39:11,626 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (14 retries left).
+2018-09-17 09:40:12,379 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (13 retries left).
+2018-09-17 09:41:13,019 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (12 retries left).
+2018-09-17 09:42:13,653 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (11 retries left).
+2018-09-17 09:43:14,236 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (10 retries left).
+2018-09-17 09:44:14,759 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (9 retries left).
+2018-09-17 09:45:15,415 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (8 retries left).
+2018-09-17 09:46:16,030 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (7 retries left).
+2018-09-17 09:47:16,720 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (6 retries left).
+2018-09-17 09:48:17,415 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (5 retries left).
+2018-09-17 09:49:17,993 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (4 retries left).
+2018-09-17 09:50:18,641 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (3 retries left).
+2018-09-17 09:51:19,305 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (2 retries left).
+2018-09-17 09:52:19,906 p=2749 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (1 retries left).
+2018-09-17 09:53:20,554 p=2749 u=root |  fatal: [localhost]: FAILED! => {"attempts": 30, "changed": true, "cmd": "oc --config=/root/.kube/config --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get deployment istio-sidecar-injector -o jsonpath='{.status.availableReplicas}' -n istio-system", "delta": "0:00:00.351186", "end": "2018-09-17 09:53:20.518602", "rc": 0, "start": "2018-09-17 09:53:20.167416", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2018-09-17 09:53:20,554 p=2749 u=root |  NO MORE HOSTS LEFT *************************************************************
+2018-09-17 09:53:20,558 p=2749 u=root |  	to retry, use: --limit @/root/jw18-lab-master/ansible/init.retry
+
+2018-09-17 09:53:20,558 p=2749 u=root |  PLAY RECAP *********************************************************************
+2018-09-17 09:53:20,558 p=2749 u=root |  localhost                  : ok=28   changed=9    unreachable=0    failed=1   
+2018-09-17 11:18:38,797 p=22172 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-09-17 11:18:39,231 p=22172 u=root |  PLAY [Deploy Infra Components for Cloud-Native Labs at Jenkins World 2018] **************************************************************
+2018-09-17 11:18:39,249 p=22172 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2018-09-17 11:18:40,771 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:40,786 p=22172 u=root |  TASK [include_role] *********************************************************************************************************************
+2018-09-17 11:18:40,905 p=22172 u=root |  TASK [openshift_common_facts : check if kube config dir exists] *************************************************************************
+2018-09-17 11:18:40,940 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:18:40,949 p=22172 u=root |  TASK [openshift_common_facts : set openshift cli options (.kube)] ***********************************************************************
+2018-09-17 11:18:40,979 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:18:40,988 p=22172 u=root |  TASK [openshift_common_facts : check if token file exists] ******************************************************************************
+2018-09-17 11:18:41,510 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:41,519 p=22172 u=root |  TASK [openshift_common_facts : set token facts] *****************************************************************************************
+2018-09-17 11:18:41,559 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:18:41,568 p=22172 u=root |  TASK [openshift_common_facts : set openshift cli options with token] ********************************************************************
+2018-09-17 11:18:41,603 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:18:41,612 p=22172 u=root |  TASK [openshift_common_facts : get openshift master] ************************************************************************************
+2018-09-17 11:18:42,280 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:42,299 p=22172 u=root |  TASK [openshift_common_facts : set openshift master fact] *******************************************************************************
+2018-09-17 11:18:42,364 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:42,386 p=22172 u=root |  TASK [openshift_common_facts : set openshift cli options (server)] **********************************************************************
+2018-09-17 11:18:42,436 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:42,457 p=22172 u=root |  TASK [openshift_common_facts : get openshift user] **************************************************************************************
+2018-09-17 11:18:43,145 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:43,166 p=22172 u=root |  TASK [openshift_common_facts : set openshift user fact] *********************************************************************************
+2018-09-17 11:18:43,227 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:43,249 p=22172 u=root |  TASK [openshift_common_facts : generate tmp project name] *******************************************************************************
+2018-09-17 11:18:43,307 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:43,329 p=22172 u=root |  TASK [openshift_common_facts : create tmp project] **************************************************************************************
+2018-09-17 11:18:45,101 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:18:45,123 p=22172 u=root |  TASK [openshift_common_facts : create dummy route to calculate hostnames] ***************************************************************
+2018-09-17 11:18:45,716 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:18:45,725 p=22172 u=root |  TASK [openshift_common_facts : get dummy route to calculate hostnames] ******************************************************************
+2018-09-17 11:18:46,371 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:46,383 p=22172 u=root |  TASK [openshift_common_facts : set routes hostname fact] ********************************************************************************
+2018-09-17 11:18:46,417 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:46,429 p=22172 u=root |  TASK [openshift_common_facts : delete tmp project] **************************************************************************************
+2018-09-17 11:18:47,174 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:18:47,193 p=22172 u=root |  TASK [set_fact] *************************************************************************************************************************
+2018-09-17 11:18:47,238 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:47,261 p=22172 u=root |  TASK [debug] ****************************************************************************************************************************
+2018-09-17 11:18:47,315 p=22172 u=root |  ok: [localhost] => {
+    "apps_hostname_suffix": "apps-4cf9.generic.opentlc.com"
+}
+2018-09-17 11:18:47,338 p=22172 u=root |  TASK [debug] ****************************************************************************************************************************
+2018-09-17 11:18:47,388 p=22172 u=root |  ok: [localhost] => {
+    "gogs_hostname": "gogs-lab-infra.apps-4cf9.generic.opentlc.com"
+}
+2018-09-17 11:18:47,410 p=22172 u=root |  TASK [clean up lab environment] *********************************************************************************************************
+2018-09-17 11:18:47,439 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:18:47,461 p=22172 u=root |  TASK [wait for lab-infra project to get removed] ****************************************************************************************
+2018-09-17 11:18:48,143 p=22172 u=root |  fatal: [localhost]: FAILED! => {"attempts": 1, "changed": true, "cmd": "oc --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get project lab-infra", "delta": "0:00:00.327424", "end": "2018-09-17 11:18:48.091774", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 11:18:47.764350", "stderr": "Error from server (NotFound): namespaces \"lab-infra\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"lab-infra\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 11:18:48,144 p=22172 u=root |  ...ignoring
+2018-09-17 11:18:48,163 p=22172 u=root |  TASK [wait for istio-system project to get removed] *************************************************************************************
+2018-09-17 11:18:48,938 p=22172 u=root |  fatal: [localhost]: FAILED! => {"attempts": 1, "changed": true, "cmd": "oc --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get project istio-system", "delta": "0:00:00.473123", "end": "2018-09-17 11:18:48.900239", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 11:18:48.427116", "stderr": "Error from server (NotFound): namespaces \"istio-system\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"istio-system\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 11:18:48,939 p=22172 u=root |  ...ignoring
+2018-09-17 11:18:48,962 p=22172 u=root |  TASK [wait for prod project to get removed] *********************************************************************************************
+2018-09-17 11:18:49,685 p=22172 u=root |  fatal: [localhost]: FAILED! => {"attempts": 1, "changed": true, "cmd": "oc --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get project prod", "delta": "0:00:00.387014", "end": "2018-09-17 11:18:49.634288", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 11:18:49.247274", "stderr": "Error from server (NotFound): namespaces \"prod\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"prod\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 11:18:49,686 p=22172 u=root |  ...ignoring
+2018-09-17 11:18:49,713 p=22172 u=root |  TASK [include_tasks] ********************************************************************************************************************
+2018-09-17 11:18:49,844 p=22172 u=root |  included: /root/jw18-lab-master/ansible/init_istio.yml for localhost
+2018-09-17 11:18:49,868 p=22172 u=root |  TASK [check if istio deployed] **********************************************************************************************************
+2018-09-17 11:18:50,631 p=22172 u=root |  fatal: [localhost]: FAILED! => {"changed": false, "cmd": "oc --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get project istio-system", "delta": "0:00:00.417024", "end": "2018-09-17 11:18:50.589678", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 11:18:50.172654", "stderr": "Error from server (NotFound): namespaces \"istio-system\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"istio-system\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 11:18:50,632 p=22172 u=root |  ...ignoring
+2018-09-17 11:18:50,653 p=22172 u=root |  TASK [create local openshift config directory if doesn't exist] *************************************************************************
+2018-09-17 11:18:51,133 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:51,144 p=22172 u=root |  TASK [create istio host inventory] ******************************************************************************************************
+2018-09-17 11:18:51,780 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:18:51,790 p=22172 u=root |  TASK [create istio-system project] ******************************************************************************************************
+2018-09-17 11:18:54,954 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:18:54,976 p=22172 u=root |  TASK [deploy istio installer job] *******************************************************************************************************
+2018-09-17 11:18:55,858 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:18:55,873 p=22172 u=root |  TASK [wait for istio sidecar-injector to initialize] ************************************************************************************
+2018-09-17 11:18:56,609 p=22172 u=root |  FAILED - RETRYING: wait for istio sidecar-injector to initialize (30 retries left).
+2018-09-17 11:19:57,423 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:19:57,434 p=22172 u=root |  TASK [create prod project] **************************************************************************************************************
+2018-09-17 11:19:58,999 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:19:59,010 p=22172 u=root |  TASK [set_fact] *************************************************************************************************************************
+2018-09-17 11:19:59,035 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:19:59,045 p=22172 u=root |  TASK [deploy web in prod] ***************************************************************************************************************
+2018-09-17 11:19:59,721 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:19:59,732 p=22172 u=root |  TASK [deploy inventory in prod] *********************************************************************************************************
+2018-09-17 11:20:00,571 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:20:00,582 p=22172 u=root |  TASK [deploy catalog in prod] ***********************************************************************************************************
+2018-09-17 11:20:01,591 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:20:01,605 p=22172 u=root |  TASK [add jaeger tracing to the catalog in prod] ****************************************************************************************
+2018-09-17 11:20:02,256 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:20:02,266 p=22172 u=root |  TASK [create istio ingress] *************************************************************************************************************
+2018-09-17 11:20:02,813 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:20:02,826 p=22172 u=root |  TASK [annotate deployment configs in prod for auto-inject] ******************************************************************************
+2018-09-17 11:20:04,503 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:20:04,512 p=22172 u=root |  TASK [create lab infra project] *********************************************************************************************************
+2018-09-17 11:20:06,022 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:20:06,047 p=22172 u=root |  TASK [openshift_sonatype_nexus : check if nexus project lab-infra exists] ***************************************************************
+2018-09-17 11:20:06,791 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:20:06,808 p=22172 u=root |  TASK [openshift_sonatype_nexus : create gogs project lab-infra] *************************************************************************
+2018-09-17 11:20:06,841 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:20:06,854 p=22172 u=root |  TASK [openshift_sonatype_nexus : assign user as project admin] **************************************************************************
+2018-09-17 11:20:06,884 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:20:06,898 p=22172 u=root |  TASK [openshift_sonatype_nexus : annotate project project lab-infra] ********************************************************************
+2018-09-17 11:20:06,929 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:20:06,940 p=22172 u=root |  TASK [openshift_sonatype_nexus : check if nexus exists] *********************************************************************************
+2018-09-17 11:20:07,448 p=22172 u=root |  fatal: [localhost]: FAILED! => {"changed": false, "cmd": "oc --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get service nexus -n lab-infra", "delta": "0:00:00.272042", "end": "2018-09-17 11:20:07.422793", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 11:20:07.150751", "stderr": "Error from server (NotFound): services \"nexus\" not found", "stderr_lines": ["Error from server (NotFound): services \"nexus\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 11:20:07,448 p=22172 u=root |  ...ignoring
+2018-09-17 11:20:07,461 p=22172 u=root |  TASK [openshift_sonatype_nexus : deploy nexus template (persistent)] ********************************************************************
+2018-09-17 11:20:08,058 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:20:08,070 p=22172 u=root |  TASK [openshift_sonatype_nexus : deploy nexus template (ephemeral)] *********************************************************************
+2018-09-17 11:20:08,093 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:20:08,106 p=22172 u=root |  TASK [openshift_sonatype_nexus : set nexus resources] ***********************************************************************************
+2018-09-17 11:20:08,712 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:20:08,727 p=22172 u=root |  TASK [openshift_sonatype_nexus : get nexus route] ***************************************************************************************
+2018-09-17 11:20:09,369 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:20:09,389 p=22172 u=root |  TASK [openshift_sonatype_nexus : wait for nexus to be running] **************************************************************************
+2018-09-17 11:20:10,174 p=22172 u=root |  FAILED - RETRYING: wait for nexus to be running (30 retries left).
+2018-09-17 11:20:40,728 p=22172 u=root |  FAILED - RETRYING: wait for nexus to be running (29 retries left).
+2018-09-17 11:21:11,267 p=22172 u=root |  FAILED - RETRYING: wait for nexus to be running (28 retries left).
+2018-09-17 11:21:41,794 p=22172 u=root |  FAILED - RETRYING: wait for nexus to be running (27 retries left).
+2018-09-17 11:22:12,257 p=22172 u=root |  FAILED - RETRYING: wait for nexus to be running (26 retries left).
+2018-09-17 11:22:42,828 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:22:42,849 p=22172 u=root |  TASK [include_tasks] ********************************************************************************************************************
+2018-09-17 11:22:43,033 p=22172 u=root |  included: /root/jw18-lab-master/ansible/init_gogs.yml for localhost
+2018-09-17 11:22:43,076 p=22172 u=root |  TASK [openshift_gogs : check if gogs project lab-infra exists] **************************************************************************
+2018-09-17 11:22:43,825 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:22:43,844 p=22172 u=root |  TASK [openshift_gogs : create gogs project lab-infra] ***********************************************************************************
+2018-09-17 11:22:43,884 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:22:43,899 p=22172 u=root |  TASK [openshift_gogs : assign user as project admin] ************************************************************************************
+2018-09-17 11:22:43,936 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:22:43,960 p=22172 u=root |  TASK [openshift_gogs : annotate gogs project lab-infra] *********************************************************************************
+2018-09-17 11:22:43,999 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:22:44,021 p=22172 u=root |  TASK [openshift_gogs : check if gogs exists] ********************************************************************************************
+2018-09-17 11:22:44,904 p=22172 u=root |  fatal: [localhost]: FAILED! => {"changed": false, "cmd": "oc --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get service gogs -n lab-infra", "delta": "0:00:00.477930", "end": "2018-09-17 11:22:44.862762", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 11:22:44.384832", "stderr": "Error from server (NotFound): services \"gogs\" not found", "stderr_lines": ["Error from server (NotFound): services \"gogs\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 11:22:44,904 p=22172 u=root |  ...ignoring
+2018-09-17 11:22:44,921 p=22172 u=root |  TASK [openshift_gogs : remove existing gogs if clean deploy requested] ******************************************************************
+2018-09-17 11:22:44,957 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:22:44,973 p=22172 u=root |  TASK [openshift_gogs : deploy gogs from template (persistent)] **************************************************************************
+2018-09-17 11:22:45,812 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:22:45,824 p=22172 u=root |  TASK [openshift_gogs : deploy gogs from template (ephemeral)] ***************************************************************************
+2018-09-17 11:22:45,848 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:22:45,860 p=22172 u=root |  TASK [openshift_gogs : set cpu and mem] *************************************************************************************************
+2018-09-17 11:22:46,621 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:22:46,636 p=22172 u=root |  TASK [openshift_gogs : wait for gogs postgresql to be running] **************************************************************************
+2018-09-17 11:22:47,241 p=22172 u=root |  FAILED - RETRYING: wait for gogs postgresql to be running (30 retries left).
+2018-09-17 11:23:47,826 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:23:47,837 p=22172 u=root |  TASK [openshift_gogs : create gogs admin user 'gogs'] ***********************************************************************************
+2018-09-17 11:23:48,552 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:23:48,580 p=22172 u=root |  TASK [openshift_gogs : check if user 'developer' exists] ********************************************************************************
+2018-09-17 11:23:49,276 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:23:49,304 p=22172 u=root |  TASK [openshift_gogs : create gogs user 'developer'] ************************************************************************************
+2018-09-17 11:23:50,094 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:23:50,109 p=22172 u=root |  TASK [openshift_gogs : generate gogs users] *********************************************************************************************
+2018-09-17 11:23:50,166 p=22172 u=root |  skipping: [localhost] => (item=user00) 
+2018-09-17 11:23:50,189 p=22172 u=root |  TASK [wait for gogs to be running] ******************************************************************************************************
+2018-09-17 11:23:50,774 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:23:50,796 p=22172 u=root |  TASK [check if catalog git repository exists] *******************************************************************************************
+2018-09-17 11:23:51,365 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:23:51,374 p=22172 u=root |  TASK [create catalog git repository] ****************************************************************************************************
+2018-09-17 11:23:52,027 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:23:52,049 p=22172 u=root |  TASK [create temporary git directory] ***************************************************************************************************
+2018-09-17 11:23:52,508 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:23:52,522 p=22172 u=root |  TASK [unarchive projects source archive] ************************************************************************************************
+2018-09-17 11:23:54,020 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:23:54,040 p=22172 u=root |  TASK [push catalog to git repository in Gogs] *******************************************************************************************
+2018-09-17 11:23:55,478 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:23:55,506 p=22172 u=root |  TASK [openshift_workshopper : check if workshopper project lab-infra exists] ************************************************************
+2018-09-17 11:23:56,329 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:23:56,350 p=22172 u=root |  TASK [openshift_workshopper : create workshopper project lab-infra] *********************************************************************
+2018-09-17 11:23:56,386 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:23:56,403 p=22172 u=root |  TASK [openshift_workshopper : assign user as project admin] *****************************************************************************
+2018-09-17 11:23:56,445 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:23:56,471 p=22172 u=root |  TASK [openshift_workshopper : annotate workshopper project lab-infra] *******************************************************************
+2018-09-17 11:23:56,508 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:23:56,534 p=22172 u=root |  TASK [openshift_workshopper : check if workshopper guides exists] ***********************************************************************
+2018-09-17 11:23:57,231 p=22172 u=root |  fatal: [localhost]: FAILED! => {"changed": false, "cmd": "oc --server=https://master.example.com:8443 --insecure-skip-tls-verify=true get service guides -n lab-infra", "delta": "0:00:00.329119", "end": "2018-09-17 11:23:57.194656", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 11:23:56.865537", "stderr": "Error from server (NotFound): services \"guides\" not found", "stderr_lines": ["Error from server (NotFound): services \"guides\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 11:23:57,232 p=22172 u=root |  ...ignoring
+2018-09-17 11:23:57,244 p=22172 u=root |  TASK [openshift_workshopper : deploy workshopper] ***************************************************************************************
+2018-09-17 11:23:59,195 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:23:59,205 p=22172 u=root |  TASK [openshift_workshopper : set workshopper resources] ********************************************************************************
+2018-09-17 11:23:59,914 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:23:59,933 p=22172 u=root |  TASK [openshift_workshopper : configure workshopper guide env vars] *********************************************************************
+2018-09-17 11:24:00,454 p=22172 u=root |  changed: [localhost] => (item={'value': u'gogs-lab-infra.apps-4cf9.generic.opentlc.com', 'key': u'GIT_HOSTNAME'})
+2018-09-17 11:24:00,894 p=22172 u=root |  changed: [localhost] => (item={'value': u'http://grafana-istio-system.apps-4cf9.generic.opentlc.com', 'key': u'GRAFANA_URL'})
+2018-09-17 11:24:01,440 p=22172 u=root |  changed: [localhost] => (item={'value': u'http://prometheus-istio-system.apps-4cf9.generic.opentlc.com', 'key': u'PROMETHEUS_URL'})
+2018-09-17 11:24:02,027 p=22172 u=root |  changed: [localhost] => (item={'value': u'https://jaeger-query-istio-system.apps-4cf9.generic.opentlc.com', 'key': u'JAEGER_URL'})
+2018-09-17 11:24:02,534 p=22172 u=root |  changed: [localhost] => (item={'value': u'https://master-4cf9.generic.opentlc.com:8445', 'key': u'TERMINAL_URL'})
+2018-09-17 11:24:03,134 p=22172 u=root |  changed: [localhost] => (item={'value': u'http://che-lab-infra.apps-4cf9.generic.opentlc.com', 'key': u'ECLIPSE_CHE_URL'})
+2018-09-17 11:24:03,878 p=22172 u=root |  changed: [localhost] => (item={'value': u'http://nexus-lab-infra.apps-4cf9.generic.opentlc.com', 'key': u'NEXUS_EXTERNAL_URL'})
+2018-09-17 11:24:04,637 p=22172 u=root |  changed: [localhost] => (item={'value': u'apps-4cf9.generic.opentlc.com', 'key': u'APPS_HOSTNAME_SUFFIX'})
+2018-09-17 11:24:05,325 p=22172 u=root |  changed: [localhost] => (item={'value': u'https://master-4cf9.generic.opentlc.com:8443', 'key': u'OPENSHIFT_MASTER_URL'})
+2018-09-17 11:24:05,350 p=22172 u=root |  TASK [openshift_workshopper : set workshopper probes] ***********************************************************************************
+2018-09-17 11:24:06,017 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:24:06,034 p=22172 u=root |  TASK [openshift_eclipse_che : check if eclipse che project lab-infra exists] ************************************************************
+2018-09-17 11:24:06,710 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:24:06,725 p=22172 u=root |  TASK [openshift_eclipse_che : create eclipse che project lab-infra] *********************************************************************
+2018-09-17 11:24:06,747 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:24:06,759 p=22172 u=root |  TASK [openshift_eclipse_che : assign user as project admin] *****************************************************************************
+2018-09-17 11:24:06,780 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:24:06,794 p=22172 u=root |  TASK [openshift_eclipse_che : annotate eclipse che project lab-infra] *******************************************************************
+2018-09-17 11:24:06,815 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:24:06,827 p=22172 u=root |  TASK [openshift_eclipse_che : import eclipse che template] ******************************************************************************
+2018-09-17 11:24:07,742 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:24:07,758 p=22172 u=root |  TASK [openshift_eclipse_che : deploy eclipse che template] ******************************************************************************
+2018-09-17 11:24:08,586 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:24:08,596 p=22172 u=root |  TASK [openshift_eclipse_che : adjust eclipse che resources] *****************************************************************************
+2018-09-17 11:24:11,014 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:24:11,024 p=22172 u=root |  TASK [wait for eclipse che to be running] ***********************************************************************************************
+2018-09-17 11:24:11,560 p=22172 u=root |  FAILED - RETRYING: wait for eclipse che to be running (30 retries left).
+2018-09-17 11:25:12,175 p=22172 u=root |  FAILED - RETRYING: wait for eclipse che to be running (29 retries left).
+2018-09-17 11:26:12,815 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:26:12,832 p=22172 u=root |  TASK [create custom stack for jdk and openshift cli] ************************************************************************************
+2018-09-17 11:26:13,489 p=22172 u=root |  ok: [localhost]
+2018-09-17 11:26:13,503 p=22172 u=root |  TASK [check openjdk image stream installed] *********************************************************************************************
+2018-09-17 11:26:14,195 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:26:14,215 p=22172 u=root |  TASK [display instructions to install openjdk image stream] *****************************************************************************
+2018-09-17 11:26:14,244 p=22172 u=root |  skipping: [localhost]
+2018-09-17 11:26:14,265 p=22172 u=root |  TASK [populate nexus] *******************************************************************************************************************
+2018-09-17 11:26:16,026 p=22172 u=root |  changed: [localhost]
+2018-09-17 11:26:16,031 p=22172 u=root |  PLAY RECAP ******************************************************************************************************************************
+2018-09-17 11:26:16,032 p=22172 u=root |  localhost                  : ok=70   changed=33   unreachable=0    failed=0   
+2018-09-17 12:19:26,818 p=107790 u=root |  - downloading role 'openshift_common_facts', owned by siamaksade
+2018-09-17 12:19:28,298 p=107790 u=root |  - downloading role from https://github.com/siamaksade/ansible-openshift-common-facts/archive/master.tar.gz
+2018-09-17 12:19:28,575 p=107790 u=root |  - extracting siamaksade.openshift_common_facts to /root/jw18-lab-master/ansible/roles/siamaksade.openshift_common_facts
+2018-09-17 12:19:28,584 p=107790 u=root |  - siamaksade.openshift_common_facts (master) was installed successfully
+2018-09-17 12:20:29,415 p=109046 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-09-17 12:20:29,729 p=109046 u=root |  PLAY [Deploy Inventory DEV template for Cloud-Native Labs at Jenkins World 2018] **********************************************
+2018-09-17 12:20:29,742 p=109046 u=root |  TASK [Gathering Facts] ********************************************************************************************************
+2018-09-17 12:20:31,538 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:31,555 p=109046 u=root |  TASK [include_role] ***********************************************************************************************************
+2018-09-17 12:20:31,698 p=109046 u=root |  TASK [openshift_common_facts : check if kube config dir exists] ***************************************************************
+2018-09-17 12:20:31,731 p=109046 u=root |  skipping: [localhost]
+2018-09-17 12:20:31,753 p=109046 u=root |  TASK [openshift_common_facts : set openshift cli options (.kube)] *************************************************************
+2018-09-17 12:20:31,782 p=109046 u=root |  skipping: [localhost]
+2018-09-17 12:20:31,807 p=109046 u=root |  TASK [openshift_common_facts : check if token file exists] ********************************************************************
+2018-09-17 12:20:32,330 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:32,342 p=109046 u=root |  TASK [openshift_common_facts : set token facts] *******************************************************************************
+2018-09-17 12:20:32,381 p=109046 u=root |  skipping: [localhost]
+2018-09-17 12:20:32,401 p=109046 u=root |  TASK [openshift_common_facts : set openshift cli options with token] **********************************************************
+2018-09-17 12:20:32,447 p=109046 u=root |  skipping: [localhost]
+2018-09-17 12:20:32,468 p=109046 u=root |  TASK [openshift_common_facts : get openshift master] **************************************************************************
+2018-09-17 12:20:33,216 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:33,244 p=109046 u=root |  TASK [openshift_common_facts : set openshift master fact] *********************************************************************
+2018-09-17 12:20:33,288 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:33,316 p=109046 u=root |  TASK [openshift_common_facts : set openshift cli options (server)] ************************************************************
+2018-09-17 12:20:33,358 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:33,386 p=109046 u=root |  TASK [openshift_common_facts : get openshift user] ****************************************************************************
+2018-09-17 12:20:34,088 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:34,119 p=109046 u=root |  TASK [openshift_common_facts : set openshift user fact] ***********************************************************************
+2018-09-17 12:20:34,191 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:34,215 p=109046 u=root |  TASK [openshift_common_facts : generate tmp project name] *********************************************************************
+2018-09-17 12:20:34,259 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:34,287 p=109046 u=root |  TASK [openshift_common_facts : create tmp project] ****************************************************************************
+2018-09-17 12:20:35,941 p=109046 u=root |  changed: [localhost]
+2018-09-17 12:20:35,968 p=109046 u=root |  TASK [openshift_common_facts : create dummy route to calculate hostnames] *****************************************************
+2018-09-17 12:20:36,687 p=109046 u=root |  changed: [localhost]
+2018-09-17 12:20:36,702 p=109046 u=root |  TASK [openshift_common_facts : get dummy route to calculate hostnames] ********************************************************
+2018-09-17 12:20:37,369 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:37,395 p=109046 u=root |  TASK [openshift_common_facts : set routes hostname fact] **********************************************************************
+2018-09-17 12:20:37,451 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:37,479 p=109046 u=root |  TASK [openshift_common_facts : delete tmp project] ****************************************************************************
+2018-09-17 12:20:38,058 p=109046 u=root |  changed: [localhost]
+2018-09-17 12:20:38,077 p=109046 u=root |  TASK [Verify that variable template_url is set] *******************************************************************************
+2018-09-17 12:20:38,116 p=109046 u=root |  skipping: [localhost]
+2018-09-17 12:20:38,133 p=109046 u=root |  TASK [Verify that variable openshift_cli is set] ******************************************************************************
+2018-09-17 12:20:38,173 p=109046 u=root |  skipping: [localhost]
+2018-09-17 12:20:38,204 p=109046 u=root |  TASK [Get template name] ******************************************************************************************************
+2018-09-17 12:20:39,001 p=109046 u=root |  changed: [localhost]
+2018-09-17 12:20:39,027 p=109046 u=root |  TASK [set_fact] ***************************************************************************************************************
+2018-09-17 12:20:39,063 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:39,090 p=109046 u=root |  TASK [Check if inventory-mockup template is already installed] ****************************************************************
+2018-09-17 12:20:40,281 p=109046 u=root |  changed: [localhost]
+2018-09-17 12:20:40,300 p=109046 u=root |  TASK [set_fact] ***************************************************************************************************************
+2018-09-17 12:20:40,372 p=109046 u=root |  ok: [localhost]
+2018-09-17 12:20:40,387 p=109046 u=root |  TASK [set_fact] ***************************************************************************************************************
+2018-09-17 12:20:40,418 p=109046 u=root |  skipping: [localhost]
+2018-09-17 12:20:40,435 p=109046 u=root |  TASK [Install inventory-mockup template] **************************************************************************************
+2018-09-17 12:20:40,469 p=109046 u=root |  skipping: [localhost]
+2018-09-17 12:20:40,486 p=109046 u=root |  TASK [Replace inventory-mockup template] **************************************************************************************
+2018-09-17 12:20:41,181 p=109046 u=root |  changed: [localhost]
+2018-09-17 12:20:41,184 p=109046 u=root |  PLAY RECAP ********************************************************************************************************************
+2018-09-17 12:20:41,184 p=109046 u=root |  localhost                  : ok=18   changed=6    unreachable=0    failed=0   
+2018-09-17 12:23:42,036 p=113404 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-09-17 12:24:10,207 p=113404 u=root |  localhost | SUCCESS => {
+    "changed": true, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "Loaded plugins: search-disabled-repos\nResolving Dependencies\n--> Running transaction check\n---> Package nano.x86_64 0:2.3.1-10.el7 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package     Arch          Version              Repository                 Size\n================================================================================\nInstalling:\n nano        x86_64        2.3.1-10.el7         rhel-7-server-rpms        440 k\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal download size: 440 k\nInstalled size: 1.6 M\nDownloading packages:\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : nano-2.3.1-10.el7.x86_64                                     1/1 \n  Verifying  : nano-2.3.1-10.el7.x86_64                                     1/1 \n\nInstalled:\n  nano.x86_64 0:2.3.1-10.el7                                                    \n\nComplete!\n"
+    ]
+}
+2018-09-17 12:24:40,052 p=114623 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-09-17 12:24:40,411 p=114623 u=root |  PLAY [Install Apache HTTPD container] *****************************************************************************************
+2018-09-17 12:24:40,427 p=114623 u=root |  TASK [Gathering Facts] ********************************************************************************************************
+2018-09-17 12:24:42,023 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:42,035 p=114623 u=root |  TASK [include_role] ***********************************************************************************************************
+2018-09-17 12:24:42,134 p=114623 u=root |  TASK [openshift_common_facts : check if kube config dir exists] ***************************************************************
+2018-09-17 12:24:42,181 p=114623 u=root |  skipping: [localhost]
+2018-09-17 12:24:42,211 p=114623 u=root |  TASK [openshift_common_facts : set openshift cli options (.kube)] *************************************************************
+2018-09-17 12:24:42,238 p=114623 u=root |  skipping: [localhost]
+2018-09-17 12:24:42,262 p=114623 u=root |  TASK [openshift_common_facts : check if token file exists] ********************************************************************
+2018-09-17 12:24:42,752 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:42,767 p=114623 u=root |  TASK [openshift_common_facts : set token facts] *******************************************************************************
+2018-09-17 12:24:42,790 p=114623 u=root |  skipping: [localhost]
+2018-09-17 12:24:42,811 p=114623 u=root |  TASK [openshift_common_facts : set openshift cli options with token] **********************************************************
+2018-09-17 12:24:42,837 p=114623 u=root |  skipping: [localhost]
+2018-09-17 12:24:42,866 p=114623 u=root |  TASK [openshift_common_facts : get openshift master] **************************************************************************
+2018-09-17 12:24:43,503 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:43,518 p=114623 u=root |  TASK [openshift_common_facts : set openshift master fact] *********************************************************************
+2018-09-17 12:24:43,555 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:43,571 p=114623 u=root |  TASK [openshift_common_facts : set openshift cli options (server)] ************************************************************
+2018-09-17 12:24:43,625 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:43,641 p=114623 u=root |  TASK [openshift_common_facts : get openshift user] ****************************************************************************
+2018-09-17 12:24:44,299 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:44,324 p=114623 u=root |  TASK [openshift_common_facts : set openshift user fact] ***********************************************************************
+2018-09-17 12:24:44,365 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:44,392 p=114623 u=root |  TASK [openshift_common_facts : generate tmp project name] *********************************************************************
+2018-09-17 12:24:44,429 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:44,451 p=114623 u=root |  TASK [openshift_common_facts : create tmp project] ****************************************************************************
+2018-09-17 12:24:46,255 p=114623 u=root |  changed: [localhost]
+2018-09-17 12:24:46,271 p=114623 u=root |  TASK [openshift_common_facts : create dummy route to calculate hostnames] *****************************************************
+2018-09-17 12:24:46,894 p=114623 u=root |  changed: [localhost]
+2018-09-17 12:24:46,919 p=114623 u=root |  TASK [openshift_common_facts : get dummy route to calculate hostnames] ********************************************************
+2018-09-17 12:24:47,577 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:47,595 p=114623 u=root |  TASK [openshift_common_facts : set routes hostname fact] **********************************************************************
+2018-09-17 12:24:47,664 p=114623 u=root |  ok: [localhost]
+2018-09-17 12:24:47,675 p=114623 u=root |  TASK [openshift_common_facts : delete tmp project] ****************************************************************************
+2018-09-17 12:24:48,426 p=114623 u=root |  changed: [localhost]
+2018-09-17 12:24:48,438 p=114623 u=root |  TASK [clean up server] ********************************************************************************************************
+2018-09-17 12:24:49,102 p=114623 u=root |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["oc", "--server=https://master.example.com:8443", "--insecure-skip-tls-verify=true", "delete", "project", "webserver"], "delta": "0:00:00.331744", "end": "2018-09-17 12:24:49.071048", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 12:24:48.739304", "stderr": "Error from server (NotFound): namespaces \"webserver\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"webserver\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 12:24:49,103 p=114623 u=root |  ...ignoring
+2018-09-17 12:24:49,125 p=114623 u=root |  TASK [wait for the project to really be gone] *********************************************************************************
+2018-09-17 12:24:49,827 p=114623 u=root |  fatal: [localhost]: FAILED! => {"attempts": 1, "changed": true, "cmd": ["oc", "--server=https://master.example.com:8443", "--insecure-skip-tls-verify=true", "get", "project", "webserver"], "delta": "0:00:00.348169", "end": "2018-09-17 12:24:49.789060", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 12:24:49.440891", "stderr": "Error from server (NotFound): namespaces \"webserver\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"webserver\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 12:24:49,827 p=114623 u=root |  ...ignoring
+2018-09-17 12:24:49,847 p=114623 u=root |  TASK [Create webserver project] ***********************************************************************************************
+2018-09-17 12:24:51,623 p=114623 u=root |  changed: [localhost]
+2018-09-17 12:24:51,644 p=114623 u=root |  TASK [Deploy webserver] *******************************************************************************************************
+2018-09-17 12:24:52,484 p=114623 u=root |  changed: [localhost]
+2018-09-17 12:24:52,499 p=114623 u=root |  TASK [Expose httpd service] ***************************************************************************************************
+2018-09-17 12:24:53,240 p=114623 u=root |  changed: [localhost]
+2018-09-17 12:24:53,264 p=114623 u=root |  TASK [wait for httpd to be running] *******************************************************************************************
+2018-09-17 12:24:54,080 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (20 retries left).
+2018-09-17 12:24:56,545 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (19 retries left).
+2018-09-17 12:24:59,086 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (18 retries left).
+2018-09-17 12:25:01,498 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (17 retries left).
+2018-09-17 12:25:04,013 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (16 retries left).
+2018-09-17 12:25:06,584 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (15 retries left).
+2018-09-17 12:25:09,046 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (14 retries left).
+2018-09-17 12:25:11,598 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (13 retries left).
+2018-09-17 12:25:14,085 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (12 retries left).
+2018-09-17 12:25:16,554 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (11 retries left).
+2018-09-17 12:25:19,038 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (10 retries left).
+2018-09-17 12:25:21,623 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (9 retries left).
+2018-09-17 12:25:24,208 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (8 retries left).
+2018-09-17 12:25:26,692 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (7 retries left).
+2018-09-17 12:25:29,227 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (6 retries left).
+2018-09-17 12:25:31,728 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (5 retries left).
+2018-09-17 12:25:34,205 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (4 retries left).
+2018-09-17 12:25:36,691 p=114623 u=root |  FAILED - RETRYING: wait for httpd to be running (3 retries left).
+2018-09-17 12:25:36,768 p=114623 u=root |   [ERROR]: User interrupted execution
+
+2018-09-17 12:26:14,145 p=118191 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-09-17 12:26:14,628 p=118191 u=root |  PLAY [Install Apache HTTPD container] *****************************************************************************************
+2018-09-17 12:26:14,651 p=118191 u=root |  TASK [Gathering Facts] ********************************************************************************************************
+2018-09-17 12:26:16,435 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:16,449 p=118191 u=root |  TASK [include_role] ***********************************************************************************************************
+2018-09-17 12:26:16,540 p=118191 u=root |  TASK [openshift_common_facts : check if kube config dir exists] ***************************************************************
+2018-09-17 12:26:16,568 p=118191 u=root |  skipping: [localhost]
+2018-09-17 12:26:16,584 p=118191 u=root |  TASK [openshift_common_facts : set openshift cli options (.kube)] *************************************************************
+2018-09-17 12:26:16,613 p=118191 u=root |  skipping: [localhost]
+2018-09-17 12:26:16,629 p=118191 u=root |  TASK [openshift_common_facts : check if token file exists] ********************************************************************
+2018-09-17 12:26:17,034 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:17,048 p=118191 u=root |  TASK [openshift_common_facts : set token facts] *******************************************************************************
+2018-09-17 12:26:17,072 p=118191 u=root |  skipping: [localhost]
+2018-09-17 12:26:17,087 p=118191 u=root |  TASK [openshift_common_facts : set openshift cli options with token] **********************************************************
+2018-09-17 12:26:17,107 p=118191 u=root |  skipping: [localhost]
+2018-09-17 12:26:17,122 p=118191 u=root |  TASK [openshift_common_facts : get openshift master] **************************************************************************
+2018-09-17 12:26:17,968 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:17,996 p=118191 u=root |  TASK [openshift_common_facts : set openshift master fact] *********************************************************************
+2018-09-17 12:26:18,071 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:18,103 p=118191 u=root |  TASK [openshift_common_facts : set openshift cli options (server)] ************************************************************
+2018-09-17 12:26:18,169 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:18,200 p=118191 u=root |  TASK [openshift_common_facts : get openshift user] ****************************************************************************
+2018-09-17 12:26:18,910 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:18,927 p=118191 u=root |  TASK [openshift_common_facts : set openshift user fact] ***********************************************************************
+2018-09-17 12:26:18,999 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:19,019 p=118191 u=root |  TASK [openshift_common_facts : generate tmp project name] *********************************************************************
+2018-09-17 12:26:19,078 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:19,094 p=118191 u=root |  TASK [openshift_common_facts : create tmp project] ****************************************************************************
+2018-09-17 12:26:20,958 p=118191 u=root |  changed: [localhost]
+2018-09-17 12:26:20,973 p=118191 u=root |  TASK [openshift_common_facts : create dummy route to calculate hostnames] *****************************************************
+2018-09-17 12:26:21,570 p=118191 u=root |  changed: [localhost]
+2018-09-17 12:26:21,588 p=118191 u=root |  TASK [openshift_common_facts : get dummy route to calculate hostnames] ********************************************************
+2018-09-17 12:26:22,182 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:22,202 p=118191 u=root |  TASK [openshift_common_facts : set routes hostname fact] **********************************************************************
+2018-09-17 12:26:22,261 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:26:22,273 p=118191 u=root |  TASK [openshift_common_facts : delete tmp project] ****************************************************************************
+2018-09-17 12:26:22,913 p=118191 u=root |  changed: [localhost]
+2018-09-17 12:26:22,925 p=118191 u=root |  TASK [clean up server] ********************************************************************************************************
+2018-09-17 12:26:23,523 p=118191 u=root |  changed: [localhost]
+2018-09-17 12:26:23,536 p=118191 u=root |  TASK [wait for the project to really be gone] *********************************************************************************
+2018-09-17 12:26:24,437 p=118191 u=root |  FAILED - RETRYING: wait for the project to really be gone (20 retries left).
+2018-09-17 12:26:30,379 p=118191 u=root |  FAILED - RETRYING: wait for the project to really be gone (19 retries left).
+2018-09-17 12:26:36,281 p=118191 u=root |  FAILED - RETRYING: wait for the project to really be gone (18 retries left).
+2018-09-17 12:26:42,190 p=118191 u=root |  FAILED - RETRYING: wait for the project to really be gone (17 retries left).
+2018-09-17 12:26:47,953 p=118191 u=root |  fatal: [localhost]: FAILED! => {"attempts": 5, "changed": true, "cmd": ["oc", "--server=https://master.example.com:8443", "--insecure-skip-tls-verify=true", "get", "project", "webserver"], "delta": "0:00:00.451335", "end": "2018-09-17 12:26:47.892829", "msg": "non-zero return code", "rc": 1, "start": "2018-09-17 12:26:47.441494", "stderr": "Error from server (NotFound): namespaces \"webserver\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"webserver\" not found"], "stdout": "", "stdout_lines": []}
+2018-09-17 12:26:47,953 p=118191 u=root |  ...ignoring
+2018-09-17 12:26:47,970 p=118191 u=root |  TASK [Create webserver project] ***********************************************************************************************
+2018-09-17 12:26:50,273 p=118191 u=root |  changed: [localhost]
+2018-09-17 12:26:50,312 p=118191 u=root |  TASK [Deploy webserver] *******************************************************************************************************
+2018-09-17 12:26:51,331 p=118191 u=root |  changed: [localhost]
+2018-09-17 12:26:51,352 p=118191 u=root |  TASK [Expose httpd service] ***************************************************************************************************
+2018-09-17 12:26:52,229 p=118191 u=root |  changed: [localhost]
+2018-09-17 12:26:52,256 p=118191 u=root |  TASK [wait for httpd to be running] *******************************************************************************************
+2018-09-17 12:26:53,264 p=118191 u=root |  FAILED - RETRYING: wait for httpd to be running (20 retries left).
+2018-09-17 12:26:55,831 p=118191 u=root |  FAILED - RETRYING: wait for httpd to be running (19 retries left).
+2018-09-17 12:26:58,371 p=118191 u=root |  FAILED - RETRYING: wait for httpd to be running (18 retries left).
+2018-09-17 12:27:00,873 p=118191 u=root |  FAILED - RETRYING: wait for httpd to be running (17 retries left).
+2018-09-17 12:27:03,379 p=118191 u=root |  ok: [localhost]
+2018-09-17 12:27:03,383 p=118191 u=root |  PLAY RECAP ********************************************************************************************************************
+2018-09-17 12:27:03,384 p=118191 u=root |  localhost                  : ok=19   changed=8    unreachable=0    failed=0   
